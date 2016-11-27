@@ -1,0 +1,43 @@
+import random
+
+Fehler = 0
+Wort = ['Aluminium', 'Barium', 'Cadmium', 'Calcium', 'Chroom', 'Goud', 'Kalium', 'Koper', 'Kwik', 'Lood', 'Magnesium',
+        'Mangaan', 'Natrium']
+
+while len(Wort)>0:
+    Frage = (random.choice(Wort))
+    if Frage == 'Aluminium':
+        RichtigeAntwort = 'Al(s), metaal'
+    elif Frage == 'Barium':
+        RichtigeAntwort = 'Ba(s), metaal'
+    elif Frage == 'Cadmium':
+        RichtigeAntwort = 'Cd(s), metaal'
+    elif Frage == 'Calcium':
+        RichtigeAntwort = 'Ca(s), metaal'
+    elif Frage == 'Chroom':
+        RichtigeAntwort = 'Cr(s), metaal'
+    elif Frage == 'Goud':
+        RichtigeAntwort = 'Au(s), metaal'
+    elif Frage == 'Kalium':
+        RichtigeAntwort = 'K(s), metaal'
+    elif Frage == 'Koper':
+        RichtigeAntwort = 'Cu(s), metaal'
+    elif Frage == 'Kwik':
+        RichtigeAntwort = 'Hg(l), metaal'
+    elif Frage == 'Lood':
+        RichtigeAntwort = 'Pb(s), metaal'
+    elif Frage == 'Magnesium':
+        RichtigeAntwort = 'Mg(s), metaal'
+    elif Frage == 'Mangaan':
+        RichtigeAntwort = 'Mn(s), metaal'
+    elif Frage == 'Natrium':
+        RichtigeAntwort = 'Na(s), metaal'
+    Antwort = raw_input(Frage+': ')
+    if RichtigeAntwort == Antwort:
+        print 'Hurra'
+        Wort.remove(Frage)
+    else:
+        print 'Falsch, die richtige Antwort war: '+RichtigeAntwort
+        Fehler = Fehler+1
+        
+print 'Du hast alles geschafft!'
